@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블로그 1페이지_2_추가</title>
+    <!-- ---------초기화------------ -->
+    <style>
+        body{
+            width:1200px;
+            padding:0px;
+            margin:20px auto;
+        }
+        /* ul{padding:0; margin:0;} */
+        menu li, footer li{list-style:none;}
+        a{
+            text-decoration:none;
+            color:black;
+        }
+    </style>
+    <!-- ---------헤더------------ -->
+    <style>
+        fieldset{
+            width:360px;
+            background:rgb(122, 226, 122);
+            margin: 0 auto;
+        }
+        fieldset input[type=text]{
+            width:300px;
+            font-size:30px;
+            margin: 1px;
+            border:white;
+        }
+        fieldset input[type=submit]{padding:5px;}
+
+        #menu li{
+            overflow:hidden;
+            float:left;
+            display:block;
+            margin: 10px 30px 30px 0;
+        }
+    </style>
+    <!-- ---------섹션------------ -->
+    <style>
+        section{
+            float:left;
+            width:800px;
+            display:block;
+        }
+        section img{
+            display:block;
+            margin-bottom:30px;
+        }
+
+        article{clear:both;}
+        article img{
+            float:left;
+            margin:10px;}
+    </style>
+    <!-- ---------사이드------------ -->
+    <style>
+        aside{
+            float:right;
+            width:350px;
+            box-sizing:border-box;
+            border:1px solid rgb(233, 233, 233);
+        }
+        aside .login {
+            margin: 40px;
+        }
+        aside #adv{
+            border-top:1px solid rgb(233, 233, 233);
+            margin: 10px;
+        }
+        aside h{margin-top:20px;}
+        .사이드뉴스{
+            float:left;
+            font-size:15px;
+            margin-bottom:10px;
+        }
+        nav.buttons{overflow:hidden;}
+        nav.buttons>label{
+            float:left; display:block;
+
+            width: 170px; height: 30px;
+            line-height: 30px;
+            text-align: center;
+        
+            box-sizing: border-box;
+            border: 1px solid black;
+
+            background: black;
+            color: white;
+        }
+
+        /* 첫 번째 탭 */
+        input[type=radio]:nth-of-type(1) { display: none; }
+        input[type=radio]:nth-of-type(1) ~ div:nth-of-type(1) { display: none; }
+        input[type=radio]:nth-of-type(1):checked ~ div:nth-of-type(1) { display: block; }
+
+        /* 두 번째 탭 */
+        input[type=radio]:nth-of-type(2) { display: none; }
+        input[type=radio]:nth-of-type(2) ~ div:nth-of-type(2) { display: none; }
+        input[type=radio]:nth-of-type(2):checked ~ div:nth-of-type(2) { display: block; }
+
+
+        input[type=radio]:nth-of-type(1):checked ~ nav.buttons >  label:nth-of-type(1) {
+            background: white;
+            color: black;
+        }
+        input[type=radio]:nth-of-type(2):checked ~ nav.buttons >  label:nth-of-type(2) {
+            background: white;
+            color: black;
+        }
+
+        .sidemenu >li{padding: 10px;}
+    </style>
+    <!-- ---------푸터------------ -->
+    <style>
+        footer {
+            clear:both;
+            border-top: 1px solid rgb(233, 233, 233);
+            position:relative;}
+        footer li{
+            float:left;
+            margin:10px 30px 10px 0;
+        }
+        footer a:link::after{content:' - 'attr(href);}
+        footer a{
+            position:absolute;
+            left:40px; top:70px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <fieldset>
+            <input type="text"/>
+            <input type="submit" value="검색">
+        </fieldset>
+
+        <div>
+            <ul id="menu">
+                <li><a href="#"><strong>메일</strong></a></li>
+                <li><a href="#"><strong>카페</strong></a></li>
+                <li><a href="#"><strong>블로그</strong></a></li>
+                <li><a href="#"><strong>쇼핑</strong></a></li>
+                <li><a href="#"><strong>사전</strong></a></li>
+                <li><a href="#"><strong>뉴스</strong></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section>
+        <img src="./홈페이지 이미지/블로그1.png"/>
+        <h2>오늘 읽을만한 글</h2>
+        <article>
+            <img src="./홈페이지 이미지/홈페이지1.png"/>
+            <h1>'서울역까지 20분대'</h1>
+            <p>인구 73.5만 명의 대도시 남양주... 수요자들이 주목한다.
+                서울 집값 등의 부담으로 '탈서울'현상이 가속화되고 있습니다.
+            </p>
+        </article>
+        <article>
+            <img src="./홈페이지 이미지/홈페이지1_2.png"/>
+            <h1>'똘똘한 한 채' 선호에 비싸도 몰린다</h1>
+            <p>똘똘한 한 채 선호가 커지면서 집값 양극화가 심화한 것으로 나타났다.
+                소위 '상급지'로 불리는 지역과 평균 아파트값 격차가 벌어지고 있다.
+            </p>
+        </article>
+        <article>
+            <img src="./홈페이지 이미지/홈페이지1_3.png"/>
+            <h1>'물에 이걸 넣어 보자'</h1>
+            <p>비타민 샤워 필터 첫 개발한 H201 창업기 창업 기업은 한 번쯤 자금 부족에
+                시달리는 등 큰 시행착오를 겪는 '데스밸리(죽음의 계곡)'를 지납니다.
+            </p>
+        </article>
+    </section>
+
+    <aside id="sidebar">
+        <div class="login">
+            <div><input type="text" placeholder="아이디"/></div>
+            <div><input type="password" placeholder="비밀번호"/></div>
+            <div><input type="submit" value="로그인"/></div>
+        </div>
+
+        <div>
+            <input type="radio" id="first" name="menu2" checked="checked"/>
+            <input type="radio" id="second" name="menu2"/>
+            <nav class="buttons">
+                <label for="first">First</label>
+                <label for="second">Second</label>
+            </nav>
+            <div>
+                <ul class="sidemenu">
+                    <li>인증완료</li>
+                    <li>인증완료</li>
+                    <li>포인트적립</li>
+                    <li>구매확정완료</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="sidemenu">
+                    <li>sec 메뉴</li>
+                    <li>여기서는</li>
+                    <li>됐으면</li>
+                    <li>좋겠다</li>
+                </ul>
+            </div>
+        </div>
+        <div id="adv">
+            <h>반갑다! 쇼핑뉴스</h>
+            <ul>
+                <li class="사이드뉴스"><a href="#">
+                    <strong class="사이드제목">블레스문</strong>
+                    <label>SUMMER SALE 깐달걀 되는 방법</label>
+                </a></li>
+                <li class="사이드뉴스"><a href="#">
+                    <strong class="사이드제목">원쁠딜</strong>
+                    <label>1+1구성에 무조건 무료배송</label>
+                </a></li>
+                <li class="사이드뉴스"><a href="#">
+                    <strong class="사이드제목">STL</strong>
+                    <label>여름이 시원해져 최대 89%할인</label>
+                </a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <footer id="footer">
+        <ul>
+            <li>회사소개</li>
+            <li>인재채용</li>
+            <li>이용약관</li>
+            <li><strong>개인정보처리방침</strong></li>
+        </ul>
+        <a href="https://www.naver.com/">출처</a>
+    </footer>
+</body>
+</html>
